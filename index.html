@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a0b0a" />
+    <meta name="theme-color" content="#0d100d" />
     <meta
       name="description"
       content="Anubis Imports — iPhones novos e seminovos, assistência técnica, acessórios e pedidos de importados."
@@ -13,67 +13,54 @@
       :root {
         --bg: #070807;
         --panel: #101310;
-        --panel-2: #151a15;
-        --text: #f4f4f2;
-        --muted: #a8ada5;
-        --line: rgba(183, 237, 34, 0.18);
+        --panel-2: #171b17;
+        --text: #f4f5f2;
+        --muted: #a7ada4;
         --green: #b7ed22;
-        --green-strong: #8fbf0f;
-        --danger: #ff5d5d;
-        --max-width: 1180px;
+        --green-strong: #99cf1f;
+        --line: rgba(183, 237, 34, 0.17);
+        --danger: #ff5f5f;
+        --max: 1180px;
         --radius: 20px;
       }
 
       * { box-sizing: border-box; }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Inter, Arial, sans-serif;
         background:
-          radial-gradient(circle at 80% 0%, rgba(183, 237, 34, 0.08), transparent 28%),
+          radial-gradient(circle at 80% 0%, rgba(183, 237, 34, 0.08), transparent 30%),
           var(--bg);
         color: var(--text);
         line-height: 1.6;
       }
 
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      button, input, select, textarea {
-        font: inherit;
-      }
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      button, input, textarea, select { font: inherit; }
+      p, h1, h2, h3, ul { margin-top: 0; }
 
       .container {
-        width: min(100% - 32px, var(--max-width));
+        width: min(100% - 32px, var(--max));
         margin: 0 auto;
       }
 
       header {
         position: sticky;
         top: 0;
-        z-index: 10;
-        background: rgba(7, 8, 7, 0.85);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        z-index: 50;
+        background: rgba(7, 8, 7, 0.82);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
       }
 
       .nav {
+        min-height: 78px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 78px;
-        gap: 24px;
+        gap: 20px;
       }
 
       .brand {
@@ -86,13 +73,13 @@
       .brand-mark {
         width: 42px;
         height: 42px;
+        border-radius: 50%;
         display: grid;
         place-items: center;
-        border-radius: 50%;
+        background: #040504;
         border: 2px solid var(--green);
-        background: #020302;
-        font-size: 16px;
         color: var(--green);
+        font-size: 1rem;
       }
 
       .brand-text {
@@ -115,63 +102,57 @@
       .navlinks {
         display: flex;
         align-items: center;
-        gap: 20px;
-        color: #d8ddd6;
+        gap: 22px;
+        color: #dfe4dc;
         font-size: 14px;
       }
 
-      .navlinks a:hover {
-        color: var(--green);
-      }
+      .navlinks a:hover { color: var(--green); }
 
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        padding: 13px 18px;
+        min-height: 48px;
+        padding: 12px 18px;
         border-radius: 12px;
-        border: 1px solid var(--line);
         font-weight: 800;
+        border: 1px solid var(--line);
         transition: 0.2s ease;
       }
 
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
+      .btn:hover { transform: translateY(-1px); }
       .btn-green {
         background: var(--green);
-        color: #11140c;
+        color: #0d100d;
         border-color: var(--green);
       }
-
       .btn-dark {
         background: #111510;
         color: #fff;
       }
 
       .hero {
-        padding: 72px 0 50px;
+        padding: 72px 0 52px;
       }
 
       .hero-grid {
         display: grid;
         grid-template-columns: 1.15fr 0.85fr;
-        gap: 48px;
+        gap: 56px;
         align-items: center;
       }
 
       .eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        margin-bottom: 18px;
-        font-size: 12px;
-        font-weight: 900;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
+        gap: 9px;
         color: var(--green);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 18px;
       }
 
       .eyebrow::before {
@@ -183,26 +164,19 @@
         box-shadow: 0 0 18px var(--green);
       }
 
-      h1, h2, h3, p {
-        margin-top: 0;
-      }
-
       h1 {
-        font-size: clamp(2.5rem, 6vw, 4.6rem);
-        line-height: 0.98;
+        font-size: clamp(2.8rem, 6vw, 4.8rem);
+        line-height: 0.96;
         letter-spacing: -0.06em;
         margin-bottom: 20px;
       }
 
-      h1 em {
-        color: var(--green);
-        font-style: normal;
-      }
+      h1 em { color: var(--green); font-style: normal; }
 
       .hero p {
         max-width: 620px;
         color: var(--muted);
-        font-size: 1.1rem;
+        font-size: 1.08rem;
         margin-bottom: 28px;
       }
 
@@ -227,16 +201,13 @@
         gap: 7px;
       }
 
-      .check {
-        color: var(--green);
-        font-weight: 900;
-      }
+      .check { color: var(--green); font-weight: 900; }
 
       .hero-visual {
+        position: relative;
         min-height: 420px;
         display: grid;
         place-items: center;
-        position: relative;
         border-radius: 30px;
         border: 1px solid var(--line);
         background: linear-gradient(145deg, rgba(183, 237, 34, 0.12), transparent 42%), #0d100d;
@@ -247,64 +218,59 @@
       .hero-visual::after {
         content: "";
         position: absolute;
-        border: 1px solid rgba(183, 237, 34, 0.12);
+        border: 1px solid rgba(183, 237, 34, 0.15);
         border-radius: 50%;
       }
 
-      .hero-visual::before {
-        width: 320px;
-        height: 320px;
-      }
-
-      .hero-visual::after {
-        width: 430px;
-        height: 430px;
-      }
+      .hero-visual::before { width: 320px; height: 320px; }
+      .hero-visual::after { width: 430px; height: 430px; }
 
       .phone-art {
+        position: relative;
         width: 180px;
         height: 260px;
-        border-radius: 30px;
-        border: 4px solid rgba(255, 255, 255, 0.12);
-        background: linear-gradient(180deg, #0e120e, #181c18);
-        box-shadow: 0 30px 40px rgba(0, 0, 0, 0.35);
+        border-radius: 32px;
+        background: linear-gradient(180deg, #111711, #0a0d0a);
+        border: 4px solid rgba(255,255,255,0.12);
+        box-shadow: 0 26px 45px rgba(0,0,0,0.35);
         display: grid;
         place-items: center;
-        position: relative;
       }
 
       .phone-art::before {
         content: "";
         position: absolute;
-        width: 56px;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 54px;
         height: 12px;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.08);
-        top: 18px;
+        background: rgba(255,255,255,0.08);
       }
 
       .phone-screen {
         width: 120px;
-        height: 175px;
+        height: 176px;
         border-radius: 18px;
-        background: linear-gradient(145deg, #142119, #081108);
-        border: 1px solid rgba(183, 237, 34, 0.2);
         display: grid;
         place-items: center;
+        background: linear-gradient(145deg, #142119, #071208);
+        border: 1px solid rgba(183, 237, 34, 0.22);
         font-size: 3rem;
       }
 
       .badge {
         position: absolute;
-        top: 18px;
         right: 18px;
-        border: 1px solid var(--line);
-        background: rgba(9, 11, 9, 0.9);
+        top: 18px;
+        z-index: 2;
         border-radius: 12px;
+        background: rgba(9, 11, 9, 0.9);
+        border: 1px solid var(--line);
         padding: 9px 10px;
         color: var(--muted);
         font-size: 11px;
-        z-index: 1;
       }
 
       .badge strong {
@@ -313,9 +279,7 @@
         font-size: 12px;
       }
 
-      section {
-        padding: 76px 0;
-      }
+      section { padding: 76px 0; }
 
       .section-head {
         display: flex;
@@ -326,16 +290,16 @@
       }
 
       .kicker {
-        margin-bottom: 10px;
         color: var(--green);
         font-size: 11px;
-        font-weight: 900;
-        letter-spacing: 0.18em;
         text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 900;
+        margin-bottom: 10px;
       }
 
       h2 {
-        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-size: clamp(2rem, 4vw, 3.15rem);
         line-height: 1.08;
         letter-spacing: -0.05em;
         margin-bottom: 0;
@@ -353,36 +317,30 @@
         gap: 14px;
       }
 
-      .feature, .card, .article, .review, .service, .contact-card {
+      .feature,
+      .product,
+      .service,
+      .review,
+      .panel,
+      .contact-card {
         background: linear-gradient(180deg, #111511, #0b0e0b);
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255,255,255,0.07);
         border-radius: 18px;
       }
 
-      .feature {
-        padding: 22px;
-      }
-
-      .feature .icon {
-        font-size: 1.7rem;
-        margin-bottom: 12px;
-      }
-
-      .feature h3 {
-        margin-bottom: 8px;
-        font-size: 1rem;
-      }
-
+      .feature { padding: 22px; }
+      .feature .icon { font-size: 1.8rem; margin-bottom: 12px; }
+      .feature h3 { margin-bottom: 8px; font-size: 1rem; }
       .feature p {
-        margin-bottom: 0;
+        margin: 0;
         color: var(--muted);
         font-size: 0.9rem;
       }
 
       .catalog-wrap {
-        background: rgba(255, 255, 255, 0.015);
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255,255,255,0.015);
+        border-top: 1px solid rgba(255,255,255,0.05);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
 
       .products {
@@ -391,28 +349,22 @@
         gap: 18px;
       }
 
-      .product {
-        overflow: hidden;
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        background: linear-gradient(180deg, #111511, #0b0e0b);
-      }
-
+      .product { overflow: hidden; }
       .product-visual {
         height: 220px;
         display: grid;
         place-items: center;
-        background: radial-gradient(circle at 50% 30%, rgba(183, 237, 34, 0.12), transparent 45%), #0b0d0b;
+        background: radial-gradient(circle at 50% 30%, rgba(183,237,34,0.12), transparent 45%), #0b0d0b;
       }
 
       .phone-mini {
         width: 92px;
         height: 180px;
-        border-radius: 24px;
-        border: 4px solid rgba(255, 255, 255, 0.12);
-        background: linear-gradient(180deg, #1a211d, #070b07);
+        border-radius: 22px;
+        background: linear-gradient(180deg, #1c201d, #0b0d0b);
+        border: 4px solid rgba(255,255,255,0.12);
         position: relative;
-        box-shadow: 0 18px 32px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 18px 32px rgba(0,0,0,0.3);
       }
 
       .phone-mini::before {
@@ -420,7 +372,7 @@
         position: absolute;
         inset: 8px;
         border-radius: 18px;
-        background: linear-gradient(145deg, #183024, #060d06);
+        background: linear-gradient(145deg, #19281f, #071208);
       }
 
       .phone-mini::after {
@@ -429,22 +381,19 @@
         top: 8px;
         left: 50%;
         transform: translateX(-50%);
-        width: 32px;
+        width: 30px;
         height: 10px;
         border-radius: 8px;
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0,0,0,0.8);
       }
 
-      .product-body {
-        padding: 20px;
-      }
-
+      .product-body { padding: 20px; }
       .tag {
         display: inline-block;
         padding: 5px 8px;
         border-radius: 7px;
-        color: #10140b;
         background: var(--green);
+        color: #0f140d;
         font-size: 10px;
         font-weight: 900;
         margin-bottom: 10px;
@@ -472,7 +421,7 @@
 
       .product-body .btn {
         width: 100%;
-        margin-top: 14px;
+        margin-top: 16px;
       }
 
       .service-grid {
@@ -504,17 +453,15 @@
         padding: 28px;
         border-radius: 22px;
         border: 1px solid var(--line);
-        background: linear-gradient(150deg, rgba(183, 237, 34, 0.1), #0d100d);
+        background: linear-gradient(150deg, rgba(183,237,34,0.10), #0d100d);
       }
 
       .quote h3 {
-        font-size: clamp(1.6rem, 4vw, 2.4rem);
-        margin-bottom: 10px;
+        font-size: clamp(1.7rem, 5vw, 2.6rem);
+        margin-bottom: 12px;
       }
 
-      .quote p {
-        color: var(--muted);
-      }
+      .quote p { color: var(--muted); }
 
       .split {
         display: grid;
@@ -522,40 +469,28 @@
         gap: 18px;
       }
 
-      .panel {
-        padding: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 18px;
-        background: linear-gradient(180deg, #111511, #0b0e0b);
-      }
-
+      .panel { padding: 28px; }
       .panel h3 {
         font-size: clamp(1.6rem, 5vw, 2.3rem);
         margin-bottom: 10px;
       }
-
-      .panel p {
-        color: var(--muted);
-      }
+      .panel p { color: var(--muted); }
 
       .list {
         list-style: none;
         padding: 0;
-        margin: 20px 0 0;
+        margin: 22px 0 0;
         display: grid;
         gap: 10px;
       }
 
       .list li {
         display: flex;
+        align-items: flex-start;
         gap: 10px;
-        align-items: start;
       }
 
-      .bullet {
-        color: var(--green);
-        font-weight: 900;
-      }
+      .bullet { color: var(--green); font-weight: 900; }
 
       .reviews {
         display: grid;
@@ -563,23 +498,11 @@
         gap: 14px;
       }
 
-      .review {
-        padding: 22px;
-      }
-
-      .stars {
-        color: var(--green);
-        letter-spacing: 0.2em;
-        font-size: 0.9rem;
-      }
-
+      .review { padding: 22px; }
+      .stars { color: var(--green); letter-spacing: 0.2em; }
       .review p {
-        margin: 14px 0 8px;
-        color: #dde2d9;
-      }
-
-      .review strong {
-        font-size: 0.9rem;
+        margin: 12px 0 10px;
+        color: #e4e7e0;
       }
 
       .faq {
@@ -590,7 +513,7 @@
 
       details {
         background: #0d100d;
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255,255,255,0.07);
         border-radius: 12px;
         padding: 16px 18px;
       }
@@ -611,13 +534,9 @@
         gap: 18px;
       }
 
-      .contact-card {
-        padding: 28px;
-      }
-
-      .contact-card h3 {
-        margin-bottom: 12px;
-      }
+      .contact-card { padding: 28px; }
+      .contact-card h3 { margin-bottom: 12px; }
+      .contact-card p { color: var(--muted); }
 
       .contact-items {
         display: grid;
@@ -630,28 +549,25 @@
         align-items: center;
         gap: 12px;
         padding: 14px 16px;
-        background: #111511;
-        border: 1px solid rgba(255, 255, 255, 0.07);
         border-radius: 12px;
+        background: #111511;
+        border: 1px solid rgba(255,255,255,0.07);
       }
 
-      .contact-item .icon {
-        color: var(--green);
-        font-size: 1.2rem;
-      }
+      .contact-item .icon { color: var(--green); font-size: 1.2rem; }
 
       footer {
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        border-top: 1px solid rgba(255,255,255,0.07);
         padding: 24px 0 36px;
-        color: #8b9288;
+        color: #8a9287;
         font-size: 12px;
       }
 
       .footer-grid {
         display: flex;
         justify-content: space-between;
-        gap: 20px;
         align-items: center;
+        gap: 20px;
       }
 
       .footer-links {
@@ -665,16 +581,15 @@
         right: 18px;
         bottom: 18px;
         z-index: 20;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         width: 60px;
         height: 60px;
+        display: grid;
+        place-items: center;
         border-radius: 50%;
         background: var(--green);
-        color: #071006;
+        color: #071007;
         font-size: 1.8rem;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.35);
       }
 
       @media (max-width: 900px) {
@@ -691,42 +606,23 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .navlinks {
-          display: none;
-        }
+        .navlinks { display: none; }
       }
 
       @media (max-width: 620px) {
-        .container {
-          width: min(100% - 24px, var(--max-width));
-        }
-
-        .hero {
-          padding-top: 52px;
-        }
-
+        .container { width: min(100% - 24px, var(--max)); }
+        .hero { padding-top: 52px; }
         .features,
         .products,
         .services,
         .reviews {
           grid-template-columns: 1fr;
         }
-
         .section-head {
           display: block;
         }
-
-        .nav {
-          min-height: 68px;
-        }
-
-        .hero-visual {
-          display: none;
-        }
-
-        .footer-grid {
-          display: block;
-        }
+        .hero-visual { display: none; }
+        .footer-grid { display: block; }
       }
     </style>
   </head>
@@ -760,10 +656,10 @@
         <div class="container hero-grid">
           <div>
             <div class="eyebrow">Especialista em iPhone</div>
-            <h1>Seu <em>iPhone</em> com qualidade, garantia e preço justo.</h1>
+            <h1>Seu <em>iPhone</em> com qualidade, garantia e bom preço.</h1>
             <p>
-              iPhones novos e seminovos, assistência técnica especializada, acessórios e
-              pedidos de importados com atendimento rápido e confiável.
+              iPhones novos e seminovos, assistência técnica especializada, acessórios e pedidos de
+              importados com atendimento rápido e confiável.
             </p>
 
             <div class="hero-actions">
@@ -774,7 +670,7 @@
             </div>
 
             <div class="trust" aria-label="Principais diferenciais">
-              <span><strong class="check">✓</strong> Atendimentos rápidos</span>
+              <span><strong class="check">✓</strong> Entrega rápida</span>
               <span><strong class="check">✓</strong> Garantia em aparelhos</span>
               <span><strong class="check">✓</strong> Suporte técnico</span>
             </div>
@@ -794,19 +690,16 @@
           <div class="section-head">
             <div>
               <div class="kicker">Por que escolher</div>
-              <h2>Atendimento que entrega confiança e resultado.</h2>
+              <h2>Atendimento que transmite confiança.</h2>
             </div>
-            <p>
-              A Anubis Imports combina qualidade, transparência e rapidez em cada etapa do
-              atendimento.
-            </p>
+            <p>A Anubis Imports combina qualidade, transparência e rapidez em cada etapa do atendimento.</p>
           </div>
 
           <div class="features">
             <article class="feature">
               <div class="icon">📦</div>
               <h3>Produtos em estoque</h3>
-              <p>Modelos novos e seminovos selecionados com atenção à qualidade.</p>
+              <p>Seleção de modelos novos e seminovos com atenção à qualidade.</p>
             </article>
 
             <article class="feature">
@@ -818,13 +711,13 @@
             <article class="feature">
               <div class="icon">🔐</div>
               <h3>Confiabilidade</h3>
-              <p>Processo claro, orientação honesta e cuidado em cada recomendação.</p>
+              <p>Processo transparente, orientação honesta e cuidado em cada detalhe.</p>
             </article>
 
             <article class="feature">
               <div class="icon">🚚</div>
               <h3>Entrega prática</h3>
-              <p>Atendimento ágil para quem quer comprar com segurança e rapidez.</p>
+              <p>Atendimento ágil para quem busca comprar com segurança.</p>
             </article>
           </div>
         </div>
@@ -842,9 +735,7 @@
 
           <div class="products">
             <article class="product">
-              <div class="product-visual">
-                <div class="phone-mini"></div>
-              </div>
+              <div class="product-visual"><div class="phone-mini"></div></div>
               <div class="product-body">
                 <span class="tag">Novo</span>
                 <h3>iPhone 14</h3>
@@ -856,9 +747,7 @@
             </article>
 
             <article class="product">
-              <div class="product-visual">
-                <div class="phone-mini" style="background: linear-gradient(180deg, #1c2129, #0b1017);"></div>
-              </div>
+              <div class="product-visual"><div class="phone-mini" style="background:linear-gradient(180deg,#1c2129,#0b1017);"></div></div>
               <div class="product-body">
                 <span class="tag">Semi-novo</span>
                 <h3>iPhone 13</h3>
@@ -870,9 +759,7 @@
             </article>
 
             <article class="product">
-              <div class="product-visual">
-                <div class="phone-mini" style="background: linear-gradient(180deg, #2a231e, #110d09);"></div>
-              </div>
+              <div class="product-visual"><div class="phone-mini" style="background:linear-gradient(180deg,#2a231e,#110d09);"></div></div>
               <div class="product-body">
                 <span class="tag">Importado</span>
                 <h3>iPhone 12</h3>
@@ -892,13 +779,13 @@
             <article class="service">
               <div class="icon">📱</div>
               <h3>Vendas de iPhone</h3>
-              <p>Modelos novos, seminovos e importados com orientação clara para cada perfil.</p>
+              <p>Modelos novos, seminovos e importados com indicação precisa para cada perfil.</p>
             </article>
 
             <article class="service">
               <div class="icon">💬</div>
-              <h3>Atendimento Humanizado</h3>
-              <p>Você fala com quem entende do produto e da sua necessidade real.</p>
+              <h3>Atendimento humanizado</h3>
+              <p>Você conversa com quem entende do produto e da sua necessidade real.</p>
             </article>
 
             <article class="service">
@@ -916,9 +803,9 @@
 
           <aside class="quote">
             <div class="kicker">Seu próximo upgrade</div>
-            <h3>Sem dor de cabeça, sem falsa promessa.</h3>
+            <h3>Sem promessas vazias e sem dor de cabeça.</h3>
             <p>
-              Aqui você encontra opções reais, critérios claros e atendimento que prioriza sua
+              Aqui você encontra opções reais, critérios claros e atendimento que prioriza a sua
               experiência antes de vender qualquer aparelho.
             </p>
             <a class="btn btn-green" href="#contato">Falar com a equipe</a>
@@ -931,7 +818,7 @@
           <div class="panel">
             <div class="kicker">Como funciona</div>
             <h3>Compra simples e segura.</h3>
-            <p>Processo direto para você encontrar o modelo certo com esse nível de atenção.</p>
+            <p>Processo direto para você encontrar o modelo certo com atenção real.</p>
             <ul class="list">
               <li><span class="bullet">✓</span>Você conta sua necessidade e prefere comprar novo ou seminovo.</li>
               <li><span class="bullet">✓</span>Recebe sugestões de modelos com melhor custo-benefício.</li>
@@ -944,9 +831,9 @@
             <h3>O que faz a Anubis se destacar.</h3>
             <p>Nosso foco é entregar confiança, transparência e qualidade em cada atendimento.</p>
             <ul class="list">
-              <li><span class="bullet">✓</span>Controle de estado do aparelho com atenção ao detalhe.</li>
-              <li><span class="bullet">✓</span>Suporte para quem busca aparelho importado ou especificação rara.</li>
-              <li><span class="bullet">✓</span>Atendimento sincero, sem pressão e com raciocínio real de venda.</li>
+              <li><span class="bullet">✓</span>Atendimento direto e sem pressão.</li>
+              <li><span class="bullet">✓</span>Seleção cuidadosa de aparelhos e acessórios.</li>
+              <li><span class="bullet">✓</span>Suporte para quem procura aparelho importado ou modelo específico.</li>
             </ul>
           </div>
         </div>
@@ -1068,14 +955,6 @@
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="Falar no WhatsApp"
-    >
-      🟢
-    </a>
+    <a class="whatsapp-float" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp">💬</a>
   </body>
 </html>
